@@ -1,0 +1,7 @@
+{
+	"directory": "public/libs",
+	"registry": "http://bower.herokuapp.com",
+  	"proxy":"http://85564:bruno123@proxy.furg.br:3128/",
+  	"https-proxy":"http://85564:bruno123@proxy.furg.br:3128/",
+  	"strict-ssl": false
+}

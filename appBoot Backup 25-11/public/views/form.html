@@ -1,0 +1,37 @@
+<div class="jumbotron text-center">
+
+	<h1>{{ title }}</h1>
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h3 class="panel-title">{{ panelTitle }}</h3>
+		</div>
+		<div class="panel-body">
+			<form class="form-signin">
+				<label for="inputNome" class="sr-only">Nome</label>
+				<input type="text" id="inputNome" class="form-control" placeholder="Nome" required autofocus>
+				<label for="inputSobrenome" class="sr-only">Sobrenome</label>
+				<input type="text" id="inputName" class="form-control" placeholder="Sobrenome" required>
+
+				<!--label for="inputDateNasc" class="sr-only">Data de nascimento</label>
+				<input type="datetime" id="inputDateNasc" class="form-control" placeholder="Data de nascimento" required-->
+				<div id="datetimepicker" class="input-append date">
+			      <input type="text"></input>
+			      <span class="add-on">
+			        <i data-time-icon="icon-time" data-date-icon="icon-calendar"></i>
+			      </span>
+    			</div>
+
+
+				<label for="inputPassword" class="sr-only">Senha</label>
+				<input type="password" id="inputPassword" class="form-control" placeholder="Senha" required>
+			</form>
+
+		</div>
+	</div>
+						    <script type="text/javascript">
+      $('#datetimepicker').datetimepicker({
+        format: 'dd/MM/yyyy hh:mm:ss',
+        language: 'pt-BR'
+      });
+    </script>
+</div>

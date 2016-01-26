@@ -1,0 +1,1 @@
+angular.module('appBoot', ['ngRoute','appRoutes','720kb.datepicker','formCtrl','formService']);
