@@ -7,7 +7,7 @@ var express    = require('express');        // call express
 var app        = express();                 // define our app using express
 var bodyParser = require('body-parser');
 var mongoose   = require('mongoose');
-var routes = require('./routes')(app);
+
 
 mongoose.connect('mongodb://localhost/teste');
 
@@ -21,20 +21,19 @@ var port = process.env.PORT || 8080;        // set our port
 
 
 
-//require('routes')(app);
 
+// Error Handling
+app.use(function(err, req, res, next) {
+    res.status(err.status || 500);
+});
 
-app.use('/api', routes);
+routes = require('./routes')(app);
+app.use('/api', router);
 
-// REGISTER OUR ROUTES -------------------------------
-// all of our routes will be prefixed with /api
-
-
+exports = module.exports = app;
 
 
 // START THE SERVER
 // =============================================================================
 app.listen(port);
 console.log('Magic happens on port ' + port);
-
-exports = module.exports = app;
